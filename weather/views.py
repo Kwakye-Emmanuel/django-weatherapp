@@ -6,7 +6,7 @@ import requests
 def weather(request):
     if request.method == 'POST':
         city = request.POST['city']
-        source = "https://api.openweathermap.org/data/2.5/weather?q={}&appid=06e6ca793ac236db5d6fc786882defb2"
+        source = "https://api.openweathermap.org/data/2.5/weather?q={}&appid="
         list_of_data = requests.get(source.format(city)).json()
 
         data = {
